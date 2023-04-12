@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:quiz_app_flutter/screens/home_Screen/home.dart';
 import 'package:quiz_app_flutter/screens/quiz/play_quiz.dart';
 
 import '../../constants.dart';
@@ -75,6 +76,10 @@ class _TrueFalseWelcomeScreenState extends State<TrueFalseWelcomeScreen> {
                     ),
                   ),
                   const Spacer(flex: 2), // it will take 2/6 spaces
+                  ElevatedButton(onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home(),));
+                  }, child: Text("Back To Home")),
                 ],
               ),
             ),

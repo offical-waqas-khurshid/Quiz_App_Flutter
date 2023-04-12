@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:quiz_app_flutter/screens/home_Screen/home.dart';
 
 import '../../constants.dart';
 import '../quiz/quiz_screen.dart';
@@ -9,10 +10,12 @@ class MultipleChoiceWelcomeScreen extends StatefulWidget {
   const MultipleChoiceWelcomeScreen({super.key});
 
   @override
-  State<MultipleChoiceWelcomeScreen> createState() => _MultipleChoiceWelcomeScreenState();
+  State<MultipleChoiceWelcomeScreen> createState() =>
+      _MultipleChoiceWelcomeScreenState();
 }
 
-class _MultipleChoiceWelcomeScreenState extends State<MultipleChoiceWelcomeScreen> {
+class _MultipleChoiceWelcomeScreenState
+    extends State<MultipleChoiceWelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +38,11 @@ class _MultipleChoiceWelcomeScreenState extends State<MultipleChoiceWelcomeScree
                   const Spacer(flex: 2), //2/6
                   Text(
                     "Let's Play Multiple Choice Quiz,",
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme
+                        .of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20,),
@@ -65,7 +72,8 @@ class _MultipleChoiceWelcomeScreenState extends State<MultipleChoiceWelcomeScree
                       ),
                       child: Text(
                         "Lets Start Quiz",
-                        style: Theme.of(context)
+                        style: Theme
+                            .of(context)
                             .textTheme
                             .button!
                             .copyWith(color: Colors.black),
@@ -73,6 +81,10 @@ class _MultipleChoiceWelcomeScreenState extends State<MultipleChoiceWelcomeScree
                     ),
                   ),
                   const Spacer(flex: 2), // it will take 2/6 spaces
+                  ElevatedButton(onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home(),));
+                  }, child: Text("Back To Home")),
                 ],
               ),
             ),

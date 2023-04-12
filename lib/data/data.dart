@@ -5,57 +5,50 @@ List<QuestionModel> getQuestions() {
   QuestionModel questionModel = QuestionModel();
 
   //1
-  questionModel.setQuestion("A baby has more bones than an adult");
+  questionModel.setQuestion("Flutter is an open-source programming language for cross-platform applications");
   questionModel.setAnswer("True");
   questions.add(questionModel);
   questionModel = QuestionModel();
 
   //2
-  questionModel.setQuestion("A shark can blink its eyes");
+  questionModel.setQuestion("Google began developing Flutter back in 2015 and supports its continued development and maintenance today alongside a highly active open-source community.");
   questionModel.setAnswer("True");
   questions.add(questionModel);
 
   questionModel = QuestionModel();
 
   //3
-  questionModel.setQuestion("The U.S dollars are made from fiber");
-  questionModel.setAnswer("False");
-  questions.add(questionModel);
-
-  questionModel = QuestionModel();
-
-  //4
-  questionModel.setQuestion("Sandwich is named after a person");
+  questionModel.setQuestion("Dart programming language is used to build Flutter applications?");
   questionModel.setAnswer("True");
   questions.add(questionModel);
 
   questionModel = QuestionModel();
 
+  //4
+  questionModel.setQuestion("2 types of widgets in Flutter?");
+  questionModel.setAnswer("False");
+  questions.add(questionModel);
+
+  questionModel = QuestionModel();
+
   //5
-  questionModel.setQuestion("A tiger gas stripes on its skin");
+  questionModel.setQuestion("Firebase  to a cloud database through Flutter is available through which service?");
   questionModel.setAnswer("True");
   questions.add(questionModel);
 
   questionModel = QuestionModel();
 
   //6
-  questionModel.setQuestion("An ostrich has the largest eye in the world");
+  questionModel.setQuestion("Widget element is used as an identifier for components when programming in Flutter?");
   questionModel.setAnswer("False");
   questions.add(questionModel);
 
   questionModel = QuestionModel();
 
   //7
-  questionModel.setQuestion("Some 16 billion emails are send daily");
+  questionModel.setQuestion("Graphic based of Flutter animation allows you to represent real-world behavior?");
   questionModel.setAnswer("False");
   questions.add(questionModel);
-  questionModel = QuestionModel();
-
-  //8
-  questionModel.setQuestion("Gorilla's blood type is all B");
-  questionModel.setAnswer("True");
-  questions.add(questionModel);
-
   questionModel = QuestionModel();
 
   return questions;
