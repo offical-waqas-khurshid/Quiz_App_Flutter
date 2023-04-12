@@ -1,5 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz_app_flutter/screens/score/score_screen_multiple_choice.dart';
 
 import '../../data/data.dart';
 import '../../models/question_model.dart';
@@ -56,12 +56,13 @@ class _PlayQuizState extends State<PlayQuiz>
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      Result(
-                        score: points,
-                        totalQuestion: questions.length,
-                        correct: correct,
-                        incorrect: incorrect,
-                      )));
+                      ScoreScreenMultipleChoice(
+                        // score: points,
+                        // totalQuestion: questions.length,
+                        // correct: correct,
+                        // incorrect: incorrect,
+                      )
+              ));
         }
       }
     });
@@ -89,11 +90,11 @@ class _PlayQuizState extends State<PlayQuiz>
           context,
           MaterialPageRoute(
               builder: (context) =>
-                  Result(
-                    score: points,
-                    totalQuestion: questions.length,
-                    correct: correct,
-                    incorrect: incorrect,
+                  ScoreScreenMultipleChoice(
+                    // score: points,
+                    // totalQuestion: questions.length,
+                    // correct: correct,
+                    // incorrect: incorrect,
                   )));
     }
   }
@@ -102,7 +103,7 @@ class _PlayQuizState extends State<PlayQuiz>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 80),
+        padding: const EdgeInsets.symmetric(vertical: 80),
         width: MediaQuery
             .of(context)
             .size
@@ -111,11 +112,11 @@ class _PlayQuizState extends State<PlayQuiz>
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Row(
                 children: <Widget>[
                   Row(
@@ -123,32 +124,32 @@ class _PlayQuizState extends State<PlayQuiz>
                     children: <Widget>[
                       Text(
                         "${index + 1}/${questions.length}",
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 25, fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         "Question",
                         style: TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.w300),
+                            fontSize: 17, fontWeight: FontWeight.w300, color: Colors.white),
                       )
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
                       Text(
                         "$points",
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 25, fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         "Points",
                         style: TextStyle(
                             fontSize: 17, fontWeight: FontWeight.w300),
@@ -158,28 +159,28 @@ class _PlayQuizState extends State<PlayQuiz>
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Text(
-              questions[index].getQuestion() + "?",
+              questions[index].getQuestion()! + "?",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.black87,
+              style:const TextStyle(
+                  color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.w500),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            // SizedBox(
+            //   height: 20,
+            // ),
+            // Container(
+            //     child: LinearProgressIndicator(
+            //       value: animation.value,
+            //     )),
+            // CachedNetworkImage(imageUrl: questions[index].getImageUrl(),),
+            const SizedBox(height: 150,),
             Container(
-                child: LinearProgressIndicator(
-                  value: animation.value,
-                )),
-            CachedNetworkImage(imageUrl: questions[index].getImageUrl(),),
-            Spacer(),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
@@ -201,11 +202,11 @@ class _PlayQuizState extends State<PlayQuiz>
                           }
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding:const  EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
                               color: Colors.lightBlue,
                               borderRadius: BorderRadius.circular(24)),
-                          child: Text(
+                          child: const Text(
                             "True",
                             style: TextStyle(
                                 color: Colors.white,
@@ -215,7 +216,7 @@ class _PlayQuizState extends State<PlayQuiz>
                           ),
                         ),
                       )),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Expanded(

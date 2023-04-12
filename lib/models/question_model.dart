@@ -3,8 +3,7 @@ class QuestionModel{
   String? question;
   String? answer;
 
-
-  QuestionModel({ this.question, this.answer});
+  QuestionModel({this.question, this.answer});
 
   void setQuestion(String getQuestion){
     question = getQuestion;
@@ -14,20 +13,14 @@ class QuestionModel{
     answer = getAnswer;
   }
 
-  void setImageUrl(String getImageUrl){
-    imageUrl = getImageUrl;
-  }
 
-  String getQuestion(){
+  String? getQuestion(){
     return question;
   }
 
-  String getAnswer(){
+  String? getAnswer(){
     return answer;
   }
 
-  String getImageUrl(){
-    return imageUrl;
-  }
 
 }

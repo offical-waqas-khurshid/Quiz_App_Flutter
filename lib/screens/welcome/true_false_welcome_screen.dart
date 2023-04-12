@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:quiz_app_flutter/screens/quiz/play_quiz.dart';
 
 import '../../constants.dart';
 import '../quiz/quiz_screen.dart';
@@ -34,7 +35,7 @@ class _TrueFalseWelcomeScreenState extends State<TrueFalseWelcomeScreen> {
                 children: [
                   const Spacer(flex: 2), //2/6
                   Text(
-                    "Let's Play Multiple Choice Quiz,",
+                    "Let's Play True/False Quiz,",
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -53,7 +54,7 @@ class _TrueFalseWelcomeScreenState extends State<TrueFalseWelcomeScreen> {
                   ),
                   const Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(const PlayQuiz()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,

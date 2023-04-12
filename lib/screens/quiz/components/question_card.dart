@@ -8,7 +8,7 @@ import '../../../models/Questions.dart';
 import 'option.dart';
 
 class QuestionCard extends StatelessWidget {
-  const QuestionCard({
+  const QuestionCard({super.key,
     // it means we have to pass this
     required this.question,
   });
@@ -34,7 +34,7 @@ class QuestionCard extends StatelessWidget {
                 .headline6!
                 .copyWith(color: kBlackColor),
           ),
-          SizedBox(height: kDefaultPadding / 2),
+         const  SizedBox(height: kDefaultPadding / 2),
           ...List.generate(
             question.options.length,
             (index) => Option(
