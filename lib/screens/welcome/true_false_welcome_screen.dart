@@ -9,7 +9,8 @@ import '../quiz/quiz_screen.dart';
 
 class TrueFalseWelcomeScreen extends StatefulWidget {
   int? score;
-   TrueFalseWelcomeScreen({super.key, this.score});
+
+  TrueFalseWelcomeScreen({super.key, this.score});
 
   @override
   State<TrueFalseWelcomeScreen> createState() => _TrueFalseWelcomeScreenState();
@@ -41,7 +42,9 @@ class _TrueFalseWelcomeScreenState extends State<TrueFalseWelcomeScreen> {
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 20,),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   const Text("Enter your information's below"),
                   const Spacer(), // 1/6
                   const TextField(
@@ -76,10 +79,15 @@ class _TrueFalseWelcomeScreenState extends State<TrueFalseWelcomeScreen> {
                     ),
                   ),
                   const Spacer(flex: 2), // it will take 2/6 spaces
-                  ElevatedButton(onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home(),));
-                  }, child: Text("Back To Home")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Home(),
+                            ));
+                      },
+                      child: Text("Back To Home")),
                 ],
               ),
             ),
