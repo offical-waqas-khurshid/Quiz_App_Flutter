@@ -5,12 +5,14 @@ import 'package:get/get.dart';
 import '../../constants.dart';
 import '../quiz/quiz_screen.dart';
 
-class WelcomeScreen extends StatefulWidget {
+class TrueFalseWelcomeScreen extends StatefulWidget {
+  const TrueFalseWelcomeScreen({super.key});
+
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<TrueFalseWelcomeScreen> createState() => _TrueFalseWelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _TrueFalseWelcomeScreenState extends State<TrueFalseWelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,11 +34,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 children: [
                   const Spacer(flex: 2), //2/6
                   Text(
-                    "Let's Play Quiz,",
+                    "Let's Play Multiple Choice Quiz,",
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  const Text("Enter your informations below"),
+                  const SizedBox(height: 20,),
+                  const Text("Enter your information's below"),
                   const Spacer(), // 1/6
                   const TextField(
                     decoration: InputDecoration(

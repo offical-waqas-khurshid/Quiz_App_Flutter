@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 import '../models/Questions.dart';
-import '../screens/score/score_screen.dart';
+import '../screens/score/score_screen_multiple_choice.dart';
 
 
 class QuestionController extends GetxController
@@ -113,7 +113,7 @@ class QuestionController extends GetxController
       _animationController.forward().whenComplete(nextQuestion);
     } else {
       // Get package provide us simple way to naviigate another page
-      Get.to(ScoreScreen());
+      Get.to(ScoreScreenMultipleChoice());
     }
   }
 

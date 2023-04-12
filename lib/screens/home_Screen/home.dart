@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app_flutter/screens/welcome/welcome_screen.dart';
+import 'package:quiz_app_flutter/screens/welcome/multple_choice_welcome_screen.dart';
+import 'package:quiz_app_flutter/screens/welcome/true_false_welcome_screen.dart';
 
 import '../../constants.dart';
 
@@ -12,7 +13,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Quiz App", style: TextStyle(color: Colors.white),),
+        title: const Text(
+          "Quiz App",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
       ),
       drawer: Drawer(
@@ -47,7 +51,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => WelcomeScreen(),
+                      builder: (context) => const MultipleChoiceWelcomeScreen(),
                     ));
               },
             ),
@@ -58,7 +62,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => WelcomeScreen(),
+                      builder: (context) => const TrueFalseWelcomeScreen(),
                     ));
               },
             ),
@@ -88,7 +92,7 @@ class Home extends StatelessWidget {
                   ),
                   const Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(WelcomeScreen()),
+                    onTap: () => Get.to(const MultipleChoiceWelcomeScreen()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,

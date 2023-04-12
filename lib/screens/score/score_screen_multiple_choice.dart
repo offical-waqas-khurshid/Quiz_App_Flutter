@@ -6,11 +6,20 @@ import 'package:get/get_core/src/get_main.dart';
 import '../../constants.dart';
 import '../../controllers/question_controller.dart';
 
-class ScoreScreen extends StatelessWidget {
+class ScoreScreenMultipleChoice extends StatelessWidget {
+  const ScoreScreenMultipleChoice({super.key});
+
   @override
   Widget build(BuildContext context) {
     QuestionController _qnController = Get.put(QuestionController());
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Quiz App",
+          style: TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -19,7 +28,8 @@ class ScoreScreen extends StatelessWidget {
             children: [
               const Spacer(flex: 3),
               Text(
-                "Score",
+                "Your "
+                    "Score",
                 style: Theme.of(context)
                     .textTheme
                     .headline3!
