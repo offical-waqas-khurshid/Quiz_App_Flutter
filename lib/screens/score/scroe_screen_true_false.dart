@@ -6,8 +6,9 @@ import 'package:get/get_core/src/get_main.dart';
 import '../../constants.dart';
 import '../../controllers/question_controller.dart';
 
-class ScoreScreenMultipleChoice extends StatelessWidget {
-  const ScoreScreenMultipleChoice({super.key});
+class ScoreScreenTrueFalse extends StatelessWidget {
+  int? score;
+   ScoreScreenTrueFalse({super.key, this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class ScoreScreenMultipleChoice extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
+                "$score",
                 style: Theme.of(context)
                     .textTheme
                     .headline4!

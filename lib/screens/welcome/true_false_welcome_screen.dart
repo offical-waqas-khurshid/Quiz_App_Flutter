@@ -7,7 +7,8 @@ import '../../constants.dart';
 import '../quiz/quiz_screen.dart';
 
 class TrueFalseWelcomeScreen extends StatefulWidget {
-  const TrueFalseWelcomeScreen({super.key});
+  int? score;
+   TrueFalseWelcomeScreen({super.key, this.score});
 
   @override
   State<TrueFalseWelcomeScreen> createState() => _TrueFalseWelcomeScreenState();
