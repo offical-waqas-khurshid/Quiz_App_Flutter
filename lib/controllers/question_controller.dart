@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import '../models/Questions.dart';
 import '../screens/score/score_screen.dart';
 
-// We use get package for our state management
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
@@ -12,37 +11,46 @@ class QuestionController extends GetxController
 
   late AnimationController _animationController;
   late Animation _animation;
+
   // so that we can access our animation outside
   Animation get animation => this._animation;
 
   late PageController _pageController;
+
   PageController get pageController => this._pageController;
 
   List<Question> _questions = sample_data
       .map(
-        (question) => Question(
+        (question) =>
+        Question(
             id: question['id'],
             question: question['question'],
             options: question['options'],
             answer: question['answer_index']),
-      )
+  )
       .toList();
+
   List<Question> get questions => this._questions;
 
   bool _isAnswered = false;
+
   bool get isAnswered => this._isAnswered;
 
   late int _correctAns;
+
   int get correctAns => this._correctAns;
 
   late int _selectedAns;
+
   int get selectedAns => this._selectedAns;
 
   // for more about obs please check documentation
   RxInt _questionNumber = 1.obs;
+
   RxInt get questionNumber => this._questionNumber;
 
   int _numOfCorrectAns = 0;
+
   int get numOfCorrectAns => this._numOfCorrectAns;
 
   // called immediately after the widget is allocated memory

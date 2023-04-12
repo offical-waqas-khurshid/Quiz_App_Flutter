@@ -17,7 +17,7 @@ class ScoreScreen extends StatelessWidget {
           SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
           Column(
             children: [
-              Spacer(flex: 3),
+              const Spacer(flex: 3),
               Text(
                 "Score",
                 style: Theme.of(context)
@@ -25,7 +25,7 @@ class ScoreScreen extends StatelessWidget {
                     .headline3!
                     .copyWith(color: kSecondaryColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
                 style: Theme.of(context)
@@ -33,7 +33,7 @@ class ScoreScreen extends StatelessWidget {
                     .headline4!
                     .copyWith(color: kSecondaryColor),
               ),
-              Spacer(flex: 3),
+              const Spacer(flex: 3),
             ],
           )
         ],
